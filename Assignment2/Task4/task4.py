@@ -26,11 +26,16 @@ bubble_sort(line, arr)
 for i in range(line):
     start = arr[i][0]
     end = arr[i][1]
+    min_d = arr2[0] - start
     for j in range(person):
-        if start >= arr2[j]:
+        d = arr2[j] - start
+        if start >= arr2[j] and d < min_d:
+            min_d = d
             arr2[j] = end
             count += 1
             break
+        elif d < min_d:
+            min_d = d
 
 out.write(str(count) + '\n')
 

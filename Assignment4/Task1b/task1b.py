@@ -1,22 +1,25 @@
-import numpy as np
-
 inp = open('input1b.txt', 'r')
 out = open('output1b.txt', 'w')
 
 ver, edge = map(int, inp.readline().split())
 
-arr = np.zeros((ver+1, ver+1), dtype=int)
-
+graph = {}
+for i in range(ver+1):
+    graph[i] = []
 for i in range(edge):
     v1, v2, w = map(int, inp.readline().split())
-    arr[v1][v2] = w
+    graph[v1].append((v2, w))
 
-for i in range(ver+1):
-    out.write(f"{i}: ")
-    for j in range(ver+1):
-        if arr[i][j] != 0:
-            out.write(f"({j}, {arr[i][j]}) ")
-    out.write("\n")
+for v, e in graph.items():
+    out.write(f"{v}: {str(e)[1:-1]}\n")
 
 inp.close()
 out.close()
+
+
+'''
+to implement adajcency list, this solution
+uses a dictionary. it store all the vertices
+as keys and all connected vertices and edge value
+stored as tuple in a list in respective keys using loop.
+'''

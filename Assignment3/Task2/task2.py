@@ -3,21 +3,38 @@ import numpy as np
 inp = open('input2.txt', 'r')
 out = open('output2.txt', 'w')
 
-l1 = int(inp.readline())
-arr1 = np.array(inp.readline().split())
-l2 = int(inp.readline())
-arr2 = np.array(inp.readline().split())
+n = int(inp.readline())
+arr = np.array(list(map(int, inp.readline().split())))
 
-arr3 = np.zeros(l1+l2, dtype=int)
 
-#O(n)
-for i in range(l1+l2):
-    if i<l1:
-        arr3[i] = int(arr1[i])
+def maximum(l, r):
+    max1 = np.zeros(1, dtype=int)
+
+    if l[0] > r[0]:
+        max1[0] = l[0]
     else:
-        arr3[i] = int(arr2[i-l1])
+        max1[0] = r[0]
 
-arr4 = sorted(arr3)
+    return max1
 
-for i in range(l1+l2):
-    out.write(f"{arr4[i]} ")
+
+def div_conqr(arr1):
+    if len(arr1) == 1:
+        return arr1
+    else:
+        mid = len(arr1) // 2
+        left = div_conqr(arr1[:mid])
+        right = div_conqr(arr1[mid:])
+        return maximum(left, right)
+
+
+out.write(f"{div_conqr(arr)[0]}\n")
+
+inp.close()
+out.close()
+
+
+'''
+Using divide and conquer algorithm, the code compare the
+elements recursively and find the maximum element. For this,
+Time complexity is O(nlogn)'''
