@@ -42,7 +42,6 @@ for k in range(1, n + 1):
 inp.close()
 out.close()
 
-
 '''
 to find the shortest path with djiakstra algorithm, in this
 solution there have been used greedy method. in this function
