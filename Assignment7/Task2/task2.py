@@ -1,41 +1,56 @@
 inp = open('input2.txt', 'r')
 out = open('output2.txt', 'w')
 
-v, e = map(int, inp.readline().split())
-visited = [0 for i in range(v+1)]
-
-graph = {}
-for i in range(v+1):
-    graph[i] = []
-for i in range(e):
-    v1, v2 = map(int, inp.readline().split())
-    graph[v1].append(v2)
-    graph[v2].append(v1)
+n, k = map(int, inp.readline().split())
 
 
-def bfs(g, s):
-    queue = [s]
-    visited[s] = 1
-    while queue:
-        temp = queue.pop(0)
-        out.write(f"{temp} ")
-        for i in g[temp]:
-            if visited[i] == 0:
-                visited[i] = 1
-                queue.append(i)
+def find_parent(parents, node):
+    par_node = parents[node]
+    if par_node == node:
+        return node
+    else:
+        return find_parent(parents, par_node)
 
 
-s = 1
-bfs(graph, s)
+def mini_spanning_cost(n, k):
+    edges = []
+    graph = []
+    mini_cost = 0
+    parents = [i for i in range(n+1)]
+
+    for i in range(k):
+        n1, n2, w = map(int, inp.readline().split())
+        edges.append([n1, n2, w])
+    sorted_edges = sorted(edges, key=lambda x: x[2])
+
+    for i in range(k):
+        node1 = sorted_edges[i][0]
+        node2 = sorted_edges[i][1]
+        cost = sorted_edges[i][2]
+
+        parent1 = find_parent(parents, node1)
+        parent2 = find_parent(parents, node2)
+
+        if parent1 != parent2:
+            parents[node2] = parent1
+            parents[parent2] = parent1
+            graph.append(sorted_edges[i])
+            mini_cost += cost
+
+    out.write(str(mini_cost))
+
+
+mini_spanning_cost(n, k)
+
 inp.close()
 out.close()
 
 
 '''
-firstly it reperesent all the graph as adjacency list using
-dictionary. then in bfs function it traverse the vertices using queue.
-it store the source vertex into the queue. when the vertex visited, it
-pop out the vertex from the queue and insert adjacent vertices into the
-queue. Thus it traverse all the connected vertices of the respective vertices
-on the queue.
+to solve this problem, I have used kruskal's algorithm.
+in find parent function it identify the parent. in mini spanning
+cost function, first of all it sorted all the edges accorting
+to their weight then it find the parents of each edges two nodes
+, if the parents are not same it joint the parents and update the mini
+cost. thus it detect minimum spanning cost.
 '''

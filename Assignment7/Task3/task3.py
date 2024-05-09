@@ -1,35 +1,33 @@
 inp = open('input3.txt', 'r')
 out = open('output3.txt', 'w')
 
-v, e = map(int, inp.readline().split())
-visited = [0 for i in range(v+1)]
-
-graph = {}
-for i in range(v+1):
-    graph[i] = []
-for i in range(e):
-    v1, v2 = map(int, inp.readline().split())
-    graph[v1].append(v2)
-    graph[v2].append(v1)
+steps = int(inp.readline())
+dict1 = {i: [] for i in range(steps+2)}
 
 
-def dfs(graph, s):
-    visited[s] = 1
-    out.write(f"{s} ")
-    for node in graph[s]:
-        if visited[node] == 0:
-            dfs(graph, node)
+def fibonacci(n):
+    if dict1[n]:
+        return dict1[n]
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        ways = fibonacci(n-1) + fibonacci(n-2)
+        dict1[n] = ways
+        return ways
 
 
-s = 1
-dfs(graph, s)
+out.write(str(fibonacci(steps+1)))
 
 inp.close()
 out.close()
 
+
 '''
-after representing the graph as adjacency list using dictionary,
-the code traverse the vertices using recurssion. it traverse all
-the connected vertices to the end of the branch recursively then it back
-to the other branches and traverse the branch. thus it implement dfs.
+To solve this problem, I have used fibonacci function in which recursive
+method has been used. Firstly, creating a dictionary in which the fibonacci
+values will stored. in fibonacci function it firstly check if the total steps key
+has any value, if not it will perform the base cases or it will do the fibonacci
+function again recursivley. thus it will count the number of ways by using recurssion.
 '''
