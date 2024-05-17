@@ -36,15 +36,3 @@ course_sequence(graph, n, prereq_count)
 
 inp.close()
 out.close()
-
-
-'''
-firstly, using a dictionary the graph is created and
-in a array, total prerequisite of each course has been
-counted. then in the main course sequence funtion a nested
-dfs function has been implemented whhere it update the
-prereq count and traverse the courses using recursion method and 
-append the valid course sequence. if the sequence list length 
-is less than the total courses then it is impossible, otherwise 
-it prints the course sequence.
-'''

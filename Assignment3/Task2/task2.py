@@ -32,9 +32,3 @@ out.write(f"{div_conqr(arr)[0]}\n")
 
 inp.close()
 out.close()
-
-
-'''
-Using divide and conquer algorithm, the code compare the
-elements recursively and find the maximum element. For this,
-Time complexity is O(nlogn)'''

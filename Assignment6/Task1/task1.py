@@ -41,14 +41,3 @@ for k in range(1, n + 1):
 
 inp.close()
 out.close()
-
-'''
-to find the shortest path with djiakstra algorithm, in this
-solution there have been used greedy method. in this function
-two for loops have been used. in first for loop it select
-the node that has not been vissited and then in second for loop
-the distance of the node is updated with the previous one after
-detecting the minimal distance. In that way, it update the shortest
-path of all the nodes from the source. if the node is not reachable
-from the node it print -1.
-'''

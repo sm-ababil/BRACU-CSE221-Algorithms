@@ -35,6 +35,5 @@ for i in range(line):
     out.write(" ".join(train_data[i]))
     out.write("\n")
 
-
-
-
+inp.close()
+out.close()

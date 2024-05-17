@@ -30,12 +30,3 @@ if flag:
 
 inp.close()
 out.close()
-
-
-'''
-Here two pointers have been used. In a for loop two element of the array is accessed 
-by using the pointers. Then the sum of the two elements is compared to the given sum.
-If the sum is equal to the given then it will write the index otherwise it will make
-the flag true which will write impossible. In this solution only one loop has been used
-that's why it's time complexity is O(n)
-'''

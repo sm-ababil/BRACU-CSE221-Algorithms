@@ -31,10 +31,3 @@ for i in range(n):
 
 inp.close()
 out.close()
-
-'''
-This code implement the quick sort algorithm
-by using two function. In partition function it comapare
-all the values of a index's left and right side and swap them
-to make it ascending. Thus it fix the right index for a element recursively
-in quick sort function. Time Complexity 0(nlogn)'''

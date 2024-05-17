@@ -22,12 +22,3 @@ out.write(str(fibonacci(steps+1)))
 
 inp.close()
 out.close()
-
-
-'''
-To solve this problem, I have used fibonacci function in which recursive
-method has been used. Firstly, creating a dictionary in which the fibonacci
-values will stored. in fibonacci function it firstly check if the total steps key
-has any value, if not it will perform the base cases or it will do the fibonacci
-function again recursivley. thus it will count the number of ways by using recurssion.
-'''

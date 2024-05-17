@@ -46,11 +46,3 @@ out.write(str(count))
 inp.close()
 out.close()
 
-
-'''
-it finds the maximum diamonds using dfs traverse of the
-graph. it traverse the vertices when it is . or D, but it 
-returns 0 for # and when it is visited using recursive method.
-Thus it traverse all the possible diamonds that can be visit to
-achieve maximum diamonds and count them.
-'''

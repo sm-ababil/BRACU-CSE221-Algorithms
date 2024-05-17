@@ -45,10 +45,3 @@ out.write(f"{dev_conqr(arr)[1]}")
 
 inp.close()
 out.close()
-
-
-'''
-Using divide and conquer algorithm, this code compares the required sum of every pair
-recursively in maximum function and find the maximum sum. It's time complexity
-O(nlogn) for using recursion.
-'''

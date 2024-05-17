@@ -40,10 +40,3 @@ for i in range(q):
 
 inp.close()
 out.close()
-
-
-'''
-This code mainly uses quick sort algorithm to find the kth smallest
-value. In every recursive call it compare the numbers to find kth smallest
-value in quick sort function. Time complexity O(nlogn).
-'''

@@ -29,3 +29,6 @@ selection_sort(line, std_data)
 
 for i in range(line):
     out.write(f"ID: {std_data[i][0]} Mark: {std_data[i][1]}\n")
+
+inp.close()
+out.close()

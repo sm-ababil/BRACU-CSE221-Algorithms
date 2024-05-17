@@ -52,14 +52,3 @@ scc(n, graph, reverse_graph)
 
 inp.close()
 out.close()
-
-
-'''
-to find the scc, here kosaraju's algorithm has been used.
-first of all, using two dictionary graph and reversed graph
-has been created. then using dfs function the main graph has
-been topsorted and stored it in stack. after that again dfs
-implemented in reversed graph and each time a scc has been
-appended in a list. thus using this algorithm all the scc has
-been found and printed.
-'''

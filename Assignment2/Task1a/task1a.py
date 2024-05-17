@@ -25,11 +25,3 @@ inp.close()
 out.close()
 
 
-'''
-I have used nested loop to solve it. The outer loop iterate over all element 
-of the array and the inner loop iterate over remaining element of the array
-and check whether the sum of two elements are equal to the given sum. If equal then 
-it give output of the elements' index, otherwise it give 'IMPOSSIBLE'. Time 
-complexity of the solution is O(n^2) because of using nested loop.
-'''
-

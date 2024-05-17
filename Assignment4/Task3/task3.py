@@ -26,10 +26,3 @@ dfs(graph, s)
 
 inp.close()
 out.close()
-
-'''
-after representing the graph as adjacency list using dictionary,
-the code traverse the vertices using recurssion. it traverse all
-the connected vertices to the end of the branch recursively then it back
-to the other branches and traverse the branch. thus it implement dfs.
-'''

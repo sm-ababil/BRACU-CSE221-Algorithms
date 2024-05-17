@@ -15,3 +15,7 @@ for i in range(0,line):
         out.write(f'The result of {b} * {c} is {b*c}\n')
     else:
         out.write(f'The result of {b} / {c} is {b/c}\n')
+
+
+inp.close()
+out.close()

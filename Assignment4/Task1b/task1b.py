@@ -15,11 +15,3 @@ for v, e in graph.items():
 
 inp.close()
 out.close()
-
-
-'''
-to implement adajcency list, this solution
-uses a dictionary. it store all the vertices
-as keys and all connected vertices and edge value
-stored as tuple in a list in respective keys using loop.
-'''

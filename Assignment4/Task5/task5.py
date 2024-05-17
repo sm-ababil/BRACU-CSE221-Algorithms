@@ -47,12 +47,3 @@ out.write(f"Shortest Path: {' '.join(map(str, shortest))}")
 
 inp.close()
 out.close()
-
-
-'''
-it identify the shortest path using bfs traverse. it traverse thoufh the 
-vertices and update the parents of the vertex and update the level adding 1.
-thus it update the value until the destination vertex. after finishing it print
-the level as the time and print the shortest path by accessing the parents of the
-destination vertex. thus it find shortest path.
-'''

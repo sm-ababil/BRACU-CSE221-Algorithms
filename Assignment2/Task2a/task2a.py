@@ -64,15 +64,3 @@ for i in range(l):
 
 inp.close()
 out.close()
-
-
-'''
-Firstly I have combined the two array into one, then that array is
-sorted in merge_sorting function. In that function the array divided
-in mid point into two arrays. Then it compare the elements of the two
-arrays and merge the sorted elements recursively into a new array. Here
-the time complexity is O(nlog(n)) where n is the number of elements in 
-the merged array. Because this solution divide the array into two halves 
-recursively and merge them in each level which take O(n), and the overall 
-time complexity is O(nlog(n)).
-'''

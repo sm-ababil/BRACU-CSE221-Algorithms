@@ -26,13 +26,3 @@ out.write(str(mini_num_coins(coins, amount)))
 inp.close()
 out.close()
 
-
-'''
-To solve this problem, i Have used a queue.
-in this q the sum total of coins value and the 
-required number of coins stored. in while loop all the possible sum total
-append in the queue and it check wheather the amount is equal to
-the given total amount. if it exceed the value it print -1, otherwse it print
-the minimum coin required for making the required amount. thus it
-it give the minimum required number of coins.
-'''

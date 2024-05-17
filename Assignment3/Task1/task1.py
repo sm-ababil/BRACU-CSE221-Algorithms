@@ -55,10 +55,3 @@ for i in ans:
 
 inp.close()
 out.close()
-
-
-'''
-To implement merge sort, two function has been created. In merge function,
-it compare the elements and add them in ascending order and merge them. In
-merge sort function the code call the merge sort recursively and divide array
-in shortest one. For using recursion, it's time complexity O(nlogn).'''

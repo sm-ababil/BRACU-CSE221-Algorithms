@@ -46,15 +46,3 @@ course_sequence(graph, n, prereq_count)
 inp.close()
 out.close()
 
-
-'''
-firstly, using a dictionary the graph is created and
-in a array, total prerequisite of each course has been
-counted. then in the main course sequence function a priority queue
-has been created where the heapified nodes will store for making 
-lexicographically smallest course sequence and a nested bfs function 
-has been implemented where it update the prereq count and traverse 
-the courses and append the valid course sequence using heappop. 
-if the sequence list length is less than the total courses then 
-it is impossible, otherwise it prints the course sequence. 
-'''

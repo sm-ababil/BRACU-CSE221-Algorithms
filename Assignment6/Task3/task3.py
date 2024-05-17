@@ -41,14 +41,3 @@ else:
 
 inp.close()
 out.close()
-
-
-'''
-to find the solution it use dfs traverse in find path function
-by using recurssion. in this function it update all the possible paths
-from source to destination with their edge weight which is danger
-level. then after finding the paths in a nested for loop it compare the
-danger levels in each path and finds the maximum for that path, then it compare
-the minimum danger level among all the paths that is the safest path possible which
-will be printed. if there is no path between source and destination it prints IMPOSSIBLE.
-'''

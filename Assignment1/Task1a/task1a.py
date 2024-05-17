@@ -8,3 +8,7 @@ for i in range(line):
         out.write(f'{a} is an Even number\n')
     else:
         out.write(f'{a} is an Odd number\n')
+
+
+inp.close()
+out.close()

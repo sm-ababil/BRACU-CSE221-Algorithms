@@ -40,12 +40,3 @@ for i in range(line):
 inp.close()
 out.close()
 
-
-'''
-To solve this, I make the pairs of the times in a 2d array.
-Then, using nested loop in bubble sort function, the pairs of the array
-has been sorted in ascending order by their end time. And then in another
-for loop the possible pairs have been found by their start time with other
-pairs' end time. Here, the time complexity is O(n^2) because of using bubble
-sort which use nested loop.
-'''

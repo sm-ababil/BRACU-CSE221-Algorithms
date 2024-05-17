@@ -53,13 +53,3 @@ else:
 
 inp.close()
 out.close()
-
-'''
-In this solution, the shortest path from each of them has been
-found seperately by using the same logic from task1. then in a
-for loop it compare the difference between their distance in each loop
-and identify which one is minimum. the minimum one is the node where
-both of them can meet in minimum distance. then it compare both of
-their distance in the node and find the maximum one that is the required
-time. if there is no such node it print impossible.
-'''

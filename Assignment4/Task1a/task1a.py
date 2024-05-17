@@ -18,11 +18,3 @@ for i in range(ver+1):
 
 inp.close()
 out.close()
-
-
-'''
-this solution uses 2d array to implement adjacency matrix.
-using a for loop it reads all the connected vertices and its
-edge weight and put the values of the edges in respective i*j
-index.
-'''

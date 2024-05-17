@@ -27,11 +27,5 @@ bubble_sort(line, arr)
 for i in range(line):
     out.write(f"{arr[i]} ")
 
-
-'''
-The best-case scenario for bubble sort is when the inputted array has already been sorted.
-I have used a flag (line11) and a 'for loop'(line12) to check whether the array is sorted or not. 
-If the array has already been sorted (best-case scenario) the flag will remain False and the code will 
-end at that for loop and the time complexity will be O(n) for using only one for loop. 
-That's how I have achieved O(n) for best case scenario.
-'''
+inp.close()
+out.close()

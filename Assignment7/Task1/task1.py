@@ -33,14 +33,3 @@ friend_circle(n, k)
 
 inp.close()
 out.close()
-
-
-'''
-To solve this problem, I have used two functions. In find parent
-function, it identnfy the parent of a node. In friend circle function
-it use two arrays, one is for tracking the parents and other is for size
-of the friend circle. in a loop, it check every query and find the parents
-of the two nodes. if the parents are not same, it joint the friends of the
-two node and update the total friend of the parent and give the output. thus,
-this problem can be solved.
-'''

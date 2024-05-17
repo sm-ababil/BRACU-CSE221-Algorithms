@@ -41,13 +41,3 @@ out.write(str(count) + '\n')
 
 inp.close()
 out.close()
-
-
-'''
-Firstly, pairs of the times included in 2d array, then using nested loop in
-bubble sort function, the pairs of the array has been sorted in ascending 
-order by their end time. After that, in another nested for loop the possible pairs
-have been counted for each of the person by their start time with other
-pairs' end time. The time complexity is O(n^2) because of using nested loops. 
-Thus, this solution uses a greedy algorithm to solve the problem.
-'''

@@ -37,11 +37,3 @@ out.write(iscyclic(graph))
 
 inp.close()
 out.close()
-
-'''
-in cycle function it using dfs traverse it traverse through
-the veretices using recursive method. if it finds any visited
-vertices which is marked by 1 it make the graph cyclic. thus it make 
-all the vertices as source and check the cyclic or not for each vertices as source.
-thus it identify cyclic graph or not.
-'''

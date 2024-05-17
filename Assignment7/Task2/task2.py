@@ -44,13 +44,3 @@ mini_spanning_cost(n, k)
 
 inp.close()
 out.close()
-
-
-'''
-to solve this problem, I have used kruskal's algorithm.
-in find parent function it identify the parent. in mini spanning
-cost function, first of all it sorted all the edges accorting
-to their weight then it find the parents of each edges two nodes
-, if the parents are not same it joint the parents and update the mini
-cost. thus it detect minimum spanning cost.
-'''

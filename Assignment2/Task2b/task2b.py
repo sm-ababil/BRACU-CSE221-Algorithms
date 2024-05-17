@@ -45,14 +45,5 @@ for i in range(l):
 inp.close()
 out.close()
 
-'''
-Firstly, I have declared an array with l number of element zero.
-Then I have used 3 pointers two iterate over given two array in a
-single loop. In this loop it compare the two elements from the two
-array and update the declared array with the smaller one. If the elements
-are equal the array update with both of the element. This loop don't compare
-the elements of the same given array cause they are already sorted. As this
-solution use only one loop that's why the time complexity is O(n)
-'''
 
 

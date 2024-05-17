@@ -27,15 +27,6 @@ def bfs(g, s):
 
 s = 1
 bfs(graph, s)
+
 inp.close()
 out.close()
-
-
-'''
-firstly it reperesent all the graph as adjacency list using
-dictionary. then in bfs function it traverse the vertices using queue.
-it store the source vertex into the queue. when the vertex visited, it
-pop out the vertex from the queue and insert adjacent vertices into the
-queue. Thus it traverse all the connected vertices of the respective vertices
-on the queue.
-'''

@@ -52,9 +52,3 @@ out.write(f"{dev_conqr(arr)[0]}")
 
 inp.close()
 out.close()
-
-'''
-This code count the possible combination in count function
-and passes the total count in another recursive call. Thus,
-it count all the possible number of pairs. Time complexity
-O(nlogn)'''
